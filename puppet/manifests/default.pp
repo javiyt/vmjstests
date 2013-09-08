@@ -21,7 +21,7 @@ exec
 		command 	=> 'apt-get update'
 }
 
-$basicPackages = [ 'wget', 'openjdk-7-jre-headless' ]
+$basicPackages = [ 'wget', 'openjdk-7-jre-headless', 'nodejs' ]
 package
 {
 	$basicPackages:
@@ -64,4 +64,11 @@ class
 {
 	'phantomjs':
 		version 	=> $phantomJSVersion,
+}
+
+exec
+{
+	'start_launcher':
+		command 	=> "nohup node /vagrant/launcher.js > /dev/null &",
+		require 		=> [ Package[$basicPackages], Exec['start_jstestdriver'], Exec['start_phantomjs'] ],
 }

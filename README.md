@@ -20,10 +20,7 @@ Create your jsTestDriver.conf file with the following content:
 
 Add your files to the src folder, and your tests to the test folder.
 
-SSH the virtual machine:
+To run all the tests included in your conf file go to:
+http://localhost:8080/
 
-	vagrant ssh
-
-And run your tests:
-
-	java -jar /usr/local/bin/JsTestDriver-1.3.5.jar --server http://localhost:9876 --config /vagrant/jsTestDriver.conf --tests all --verbose
+You will see everything the output of JSTestDriver
