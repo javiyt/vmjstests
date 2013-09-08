@@ -1,5 +1,2 @@
 .vagrant
-src
-test
-*.conf
 phantomjs-jstd.js
