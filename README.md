@@ -1,6 +1,28 @@
 vmjstests
 =========
 
+How to start
+-------------
+* Install VirtualBox: http://www.virtualbox.org
+* Install Vagrant: http://www.vagrantup.com
+* Download all repository
+
+```
+git clone ....
+git submodule update --init
+```
+
+* Execute from the directory where you have downloaded the repository
+
+```
+  $ vagrant up
+```
+
+* Enjoy
+
+
+
+
 Virtual machine to run using Vagrant with a full environment to run Javascript Tests
 
 Based on:
