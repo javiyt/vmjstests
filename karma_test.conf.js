@@ -9,11 +9,13 @@ module.exports = function(config) {
 
 
     // frameworks to use
-    frameworks: [],
+    frameworks: ['jasmine'],
 
 
     // list of files / patterns to load in the browser
     files: [
+      'libs/jasmine.js',
+      'libs/jstd-adapter.js',
       'src/*.js',
       'test/*.js'
     ],

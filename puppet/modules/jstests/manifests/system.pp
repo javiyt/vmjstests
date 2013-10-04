@@ -36,5 +36,13 @@ class jstests::system
 			require 	=> Apt::Ppa['ppa:chris-lea/node.js'],
 	}
 
+	package
+	{
+		'colors':
+			ensure 	=> present,
+			require => Package[$vmPackages],
+			provider=> "npm"
+	}
+
 	Exec['apt_sources_update'] -> Package <| |>
 }
